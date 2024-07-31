@@ -1,0 +1,6 @@
+# Ignorar archivos de datos de salida
+data/output/*.csv
+
+# Ignorar archivos de configuración del entorno virtual
+venv/
+__pycache__/
