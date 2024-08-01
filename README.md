@@ -11,6 +11,9 @@ Este proyecto tiene como objetivo mejorar la eficiencia del sistema de recolecci
   - **recopilar_datos.py**: Módulo para la recopilación de datos.
   - **exportar_resultados.py**: Módulo para exportar los resultados.
   - **main.py**: Módulo principal para ejecutar el programa.
+  - **testValles.py**: Test para pruebas Predeterminadas sector Valles
+  - **testSur.py**: Test para pruebas Predeterminadas sector Sur
+  - **testNorte.py**: Test para pruebas Predeterminadas sector Norte
 - **.gitignore**: Archivos y carpetas a ignorar por Git.
 - **README.md**: Documentación del proyecto.
 
