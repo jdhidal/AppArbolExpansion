@@ -20,7 +20,14 @@ Este proyecto tiene como objetivo mejorar la eficiencia del sistema de recolecci
    ```sh
    pip install pandas networkx matplotlib
 
-2. Ejecutar
+2. Ejecutar con datos personalizados
    ```sh
    cd src
    python main.py
+
+2. Ejecutar Test de pruebas predeterminados
+   ```sh
+   cd src
+   python testValles.py
+   python testSur.py
+   python testNorte.py
