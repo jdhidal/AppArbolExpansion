@@ -20,7 +20,7 @@ def test_main():
         ('San Carlos', 'Cotocollao', 3.5),
         ('San Carlos', 'La Ofelia', 3.2),
         ('Cotocollao', 'La Ofelia', 3.1),
-        ('Cotocollao', 'Condado', 2.6),
+        ('Cotocollao', 'Condado', 2.8),
         ('La Ofelia', 'Condado', 2.4),
         ('La Ofelia', 'Ponceano Alto', 2.7),
         ('La Ofelia', 'Comite del Pueblo', 3.0),
