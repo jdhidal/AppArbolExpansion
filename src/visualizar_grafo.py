@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-def visualizar_grafo(puntos_recoleccion, distancias, rutas_optimas, distancia_total):
+def visualizar_grafo(puntos_recoleccion, distancias, rutas_optimas, distancia_total, ruta_corta=None, distancia_corta=None):
     # Crear un grafo con todas las distancias
     G_original = nx.Graph()
 
@@ -33,6 +33,14 @@ def visualizar_grafo(puntos_recoleccion, distancias, rutas_optimas, distancia_to
     edge_labels_mst = {(i, j): f"{G_mst[i][j]['weight']} Km" for i, j in G_mst.edges}
     nx.draw_networkx_edge_labels(G_mst, pos_mst, edge_labels=edge_labels_mst, font_color='red', ax=axes[1])
     axes[1].set_title(f'Árbol de Expansión Mínima (MST)\nDistancia total: {distancia_total} Kilómetros')
+
+    # Visualizar la ruta más corta
+    if ruta_corta:
+        path_edges = list(zip(ruta_corta, ruta_corta[1:]))
+        nx.draw_networkx_edges(G_original, pos_original, edgelist=path_edges, edge_color='blue', width=2.5, ax=axes[0])
+        edge_labels_path = {(i, j): f"{G_original[i][j]['weight']} km" for i, j in path_edges}
+        nx.draw_networkx_edge_labels(G_original, pos_original, edge_labels=edge_labels_path, font_color='blue', ax=axes[0])
+        axes[0].set_title(f'Grafo Original\nRuta más corta: {ruta_corta[0]} a {ruta_corta[-1]} ({distancia_corta} Km)')
 
     plt.tight_layout()
     plt.show()
