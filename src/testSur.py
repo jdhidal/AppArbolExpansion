@@ -1,6 +1,8 @@
+import networkx as nx
 from calcular_mst import calcular_mst
 from exportar_resultados import exportar_resultados
 from visualizar_grafo import visualizar_grafo
+from calcular_ruta_mas_corta import calcular_ruta_mas_corta
 
 def test_main():
     puntos_recoleccion = [
@@ -44,8 +46,23 @@ def test_main():
     # Exportar resultados
     exportar_resultados(rutas_optimas)
 
+     # Calcular la ruta más corta entre dos puntos específicos
+    punto_inicio = 'Terminal Terrestre Quitumbe'
+    punto_fin = 'Concha Acústica'
+
+    # Crear un grafo con todas las distancias
+    G = nx.Graph()
+    for (i, j), dist in distancias.items():
+        G.add_edge(i, j, weight=dist)
+
+    ruta_corta, distancia_corta = calcular_ruta_mas_corta(G, punto_inicio, punto_fin)
+
+    # Mostrar resultados de la ruta más corta
+    print(f"Ruta más corta de {punto_inicio} a {punto_fin}: {ruta_corta}")
+    print(f"Distancia de la ruta más corta: {distancia_corta} Kilómetros")
+    
     # Visualizar grafo de rutas óptimas
-    visualizar_grafo(puntos_recoleccion, distancias, rutas_optimas, distancia_total)
+    visualizar_grafo(puntos_recoleccion, distancias, rutas_optimas, distancia_total, ruta_corta, distancia_corta)
 
 if __name__ == "__main__":
     test_main()

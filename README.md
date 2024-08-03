@@ -8,6 +8,7 @@ Este proyecto tiene como objetivo mejorar la eficiencia del sistema de recolecci
   - **output/**: Archivos de salida.
 - **src/**: Carpeta para el código fuente.
   - **calcular_mst.py**: Módulo para el análisis de árbol de expansión.
+  - **calcular_ruta_mas_corta**: Módulo para el análisis de la ruta mas corta
   - **recopilar_datos.py**: Módulo para la recopilación de datos.
   - **exportar_resultados.py**: Módulo para exportar los resultados.
   - **main.py**: Módulo principal para ejecutar el programa.
@@ -19,7 +20,7 @@ Este proyecto tiene como objetivo mejorar la eficiencia del sistema de recolecci
 
 ## Cómo Ejecutar el Programa
 
-1. Instalar las dependencias:
+1. Instalar las dependencias desde la carpeta raíz:
    ```sh
    pip install pandas networkx matplotlib
 
